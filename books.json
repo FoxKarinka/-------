@@ -1,0 +1,162 @@
+[
+    {
+        "book_id": 1,
+        "title": "1984",
+        "author": "Джордж Орвелл",
+        "genre": "Антиутопія",
+        "published_year": 1949,
+        "available": false
+    },
+    {
+        "book_id": 2,
+        "title": "Убити пересмішника",
+        "author": "Гарпер Лі",
+        "genre": "Соціальна драма",
+        "published_year": 1960,
+        "available": false
+    },
+    {
+        "book_id": 3,
+        "title": "О дивний новий світ",
+        "author": "Олдос Гакслі",
+        "genre": "Наукова фантастика",
+        "published_year": 1932,
+        "available": false
+    },
+    {
+        "book_id": 4,
+        "title": "451° за Фаренгейтом",
+        "author": "Рей Бредбері",
+        "genre": "Антиутопія",
+        "published_year": 1953,
+        "available": false
+    },
+    {
+        "book_id": 5,
+        "title": "Великий Ґетсбі",
+        "author": "Френсіс Скотт Фіцджеральд",
+        "genre": "Класика",
+        "published_year": 1925,
+        "available": false
+    },
+    {
+        "book_id": 6,
+        "title": "Злочин і кара",
+        "author": "Федір Достоєвський",
+        "genre": "Психологічний роман",
+        "published_year": 1866,
+        "available": false
+    },
+    {
+        "book_id": 7,
+        "title": "Гордість і упередження",
+        "author": "Джейн Остін",
+        "genre": "Романтика",
+        "published_year": 1813,
+        "available": true
+    },
+    {
+        "book_id": 8,
+        "title": "Ловець у житі",
+        "author": "Джером Девід Селінджер",
+        "genre": "Підліткова проза",
+        "published_year": 1951,
+        "available": true
+    },
+    {
+        "book_id": 9,
+        "title": "Гобіт, або Туди і назад",
+        "author": "Дж. Р. Р. Толкін",
+        "genre": "Фентезі",
+        "published_year": 1937,
+        "available": false
+    },
+    {
+        "book_id": 10,
+        "title": "Чужинець",
+        "author": "Альбер Камю",
+        "genre": "Екзистенціалізм",
+        "published_year": 1942,
+        "available": true
+    },
+    {
+        "book_id": 11,
+        "title": "Сто років самотності",
+        "author": "Габріель Гарсія Маркес",
+        "genre": "Магічний реалізм",
+        "published_year": 1967,
+        "available": true
+    },
+    {
+        "book_id": 12,
+        "title": "Процес",
+        "author": "Франц Кафка",
+        "genre": "Екзистенціалізм",
+        "published_year": 1925,
+        "available": false
+    },
+    {
+        "book_id": 13,
+        "title": "Майстер і Маргарита",
+        "author": "Михайло Булгаков",
+        "genre": "Містика",
+        "published_year": 1967,
+        "available": true
+    },
+    {
+        "book_id": 14,
+        "title": "Портрет Доріана Ґрея",
+        "author": "Оскар Вайлд",
+        "genre": "Готичний роман",
+        "published_year": 1890,
+        "available": true
+    },
+    {
+        "book_id": 15,
+        "title": "Бійня номер п’ять",
+        "author": "Курт Воннеґут",
+        "genre": "Антивоєнна фантастика",
+        "published_year": 1969,
+        "available": false
+    },
+    {
+        "book_id": 16,
+        "title": "Брати Карамазови",
+        "author": "Федір Достоєвський",
+        "genre": "Філософський роман",
+        "published_year": 1880,
+        "available": true
+    },
+    {
+        "book_id": 17,
+        "title": "Джейн Ейр",
+        "author": "Шарлотта Бронте",
+        "genre": "Готичний роман",
+        "published_year": 1847,
+        "available": true
+    },
+    {
+        "book_id": 18,
+        "title": "Дорога",
+        "author": "Кормак Маккарті",
+        "genre": "Постапокаліпсис",
+        "published_year": 2006,
+        "available": true
+    },
+    {
+        "book_id": 19,
+        "title": "Заводний апельсин",
+        "author": "Ентоні Берджес",
+        "genre": "Антиутопія",
+        "published_year": 1962,
+        "available": false
+    },
+    {
+        "book_id": 20,
+        "title": "Алхімік",
+        "author": "Пауло Коельйо",
+        "genre": "Філософська притча",
+        "published_year": 1988,
+        "available": true
+    }
+]
