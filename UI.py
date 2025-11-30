@@ -13,6 +13,26 @@ def save_all():
     library.save_history_to_json("history.json")
     messagebox.showinfo("Збережено", "Усі дані успішно збережено.")
 
+def remove_book_window():
+    def submit():
+        title = title_entry.get()
+        if title:
+            result = library.remove_book(title)
+            messagebox.showinfo("Результат", result)
+            save_all()
+            window.destroy()
+        else:
+            messagebox.showerror("Помилка", "Введіть назву книги.")
+
+    window = tk.Toplevel(root)
+    window.title("Вилучити книгу")
+
+    tk.Label(window, text="Назва книги").pack()
+    title_entry = tk.Entry(window)
+    title_entry.pack()
+
+    tk.Button(window, text="Вилучити", command=submit).pack()
+
 def add_book_window():
     def submit():
         title = title_entry.get()
@@ -158,6 +178,28 @@ def issue_book_window():
 
     tk.Button(window, text="Видати", command=issue).pack()
 
+def return_book_window():
+    def return_book():
+        username = user_entry.get()
+        title = title_entry.get()
+        result = library.return_book_from_user(username, title)
+        messagebox.showinfo("Результат", result)
+        save_all()
+        window.destroy()
+
+    window = tk.Toplevel(root)
+    window.title("Повернути книгу")
+
+    tk.Label(window, text="Ім’я користувача").pack()
+    user_entry = tk.Entry(window)
+    user_entry.pack()
+
+    tk.Label(window, text="Назва книги").pack()
+    title_entry = tk.Entry(window)
+    title_entry.pack()
+
+    tk.Button(window, text="Повернути", command=return_book).pack()
+
 root = tk.Tk()
 root.title("Система управління бібліотекою")
 
@@ -167,7 +209,9 @@ tk.Button(root, text=" Додати книгу", width=30, command=add_book_wind
 tk.Button(root, text=" Пошук за автором/жанром", width=30, command=search_by_author_or_genre).pack(pady=5)
 tk.Button(root, text=" Реєстрація користувача", width=30, command=register_user_window).pack(pady=5)
 tk.Button(root, text=" Виписати книгу", width=30, command=issue_book_window).pack(pady=5)
+tk.Button(root, text=" Повернути книгу", width=30, command=return_book_window).pack(pady=5)
 tk.Button(root, text=" Дізнатися чи книга в бібліотеці", width=30, command=users_who_borrowed_book).pack(pady=5)
+tk.Button(root, text=" Вилучити книгу", width=30, command=remove_book_window).pack(pady=5)
 tk.Button(root, text=" Зберегти зміни", width=30, command=save_all).pack(pady=5)
 
 root.mainloop()

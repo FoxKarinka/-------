@@ -5,7 +5,7 @@
         "author": "Джордж Орвелл",
         "genre": "Антиутопія",
         "published_year": 1949,
-        "available": false
+        "available": true
     },
     {
         "book_id": 2,
@@ -150,13 +150,5 @@
         "genre": "Антиутопія",
         "published_year": 1962,
         "available": false
-    },
-    {
-        "book_id": 20,
-        "title": "Алхімік",
-        "author": "Пауло Коельйо",
-        "genre": "Філософська притча",
-        "published_year": 1988,
-        "available": true
     }
 ]

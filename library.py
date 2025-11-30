@@ -1,4 +1,5 @@
 import json
+from datetime import datetime
 
 class Book:
     def __init__(self, title, author, genre, published_year, book_id=None, available=True):
@@ -12,6 +13,7 @@ class Book:
     def get_summary(self):
         status = "Доступна" if self.available else "Недоступна"
         return f"«{self.title}» — {self.author}, {self.published_year} [{self.genre}] — {status}"
+
 
 class User:
     def __init__(self, username, email, user_id=None):
@@ -38,7 +40,6 @@ class User:
             return "немає позичених книг"
         return ", ".join([book.title for book in self.borrowed_books])
 
-from datetime import datetime
 
 class Library:
     def __init__(self):
@@ -59,11 +60,31 @@ class Library:
 
         user.borrow_book(book)
         self.history.append({
+            "action": "borrow",
             "username": user.username,
             "book_title": book.title,
             "timestamp": datetime.now().isoformat()
         })
         return f"Книга «{book.title}» видана користувачу «{user.username}»."
+
+    def return_book_from_user(self, username, book_title):
+        user = next((u for u in self.users if u.username == username), None)
+        book = next((b for b in self.books if b.title == book_title), None)
+
+        if not user:
+            return f"Користувача «{username}» не знайдено."
+        if not book:
+            return f"Книгу «{book_title}» не знайдено."
+
+        result = user.return_book(book)
+        if "повернув" in result:
+            self.history.append({
+                "action": "return",
+                "username": user.username,
+                "book_title": book.title,
+                "timestamp": datetime.now().isoformat()
+            })
+        return result
 
     def save_history_to_json(self, filename):
         with open(filename, 'w', encoding='utf-8') as file:
